@@ -47,4 +47,4 @@ This plugin requires jQuery v1.4.2 (or higher).
 
 ##Author
 [taka3](https://github.com/taka3)
-[Octobersky](http://taka3.info)
+web: [Octobersky](http://taka3.info)
