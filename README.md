@@ -1,4 +1,4 @@
 jquery_plugin
 =============
 
-repository for jQuery Plugins
+repository for jQuery Plugins developed by taka3
