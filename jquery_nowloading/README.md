@@ -1,5 +1,13 @@
 #jQuery Nowloading Plugin
 
-#Usage
+##Installation
 
-#Lisence
+##Usage
+
+##Options
+
+##Methods
+
+##Changelog
+
+##Author
