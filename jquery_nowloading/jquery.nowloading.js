@@ -31,7 +31,7 @@
                     $loadingImg = $('<div></div>');
 
                 var settings = $.extend({
-                    'bgColor': '#99E',
+                    'bgColor': '#AAA',
                     'bgOpacity': 0.70,
                     'loadingImg': 'images/loading_img.gif',
                     'zIndex': 1000,
@@ -108,33 +108,3 @@
     };
 
 })(jQuery);
-
-
-$(function(){
-    $("#loading").nowloading({
-        "bgOpacity": 0.2,
-        "bgColor": "#8E8",
-        "imgAlign": "left",
-        "imgVAlign": "top"
-    });
-
-    $("#loading2").nowloading({
-        "bgOpacity": 0.7,
-        "bgColor": "#E88"
-    });
-});
-
-function showBg(){
-    $("#loading").nowloading("show");
-}
-function hideBg(){
-    $("#loading").nowloading("hide");
-}
-
-function showBg2(){
-    $("#loading2").nowloading("show");
-}
-function hideBg2(){
-    $("#loading2").nowloading("hide");
-}
-

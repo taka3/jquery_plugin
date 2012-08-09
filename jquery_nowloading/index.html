@@ -3,8 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>plugin test</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
-    <script src="srw_nowloading_bg.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+    <script src="jquery.nowloading.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("#loading").nowloading({
+                "bgOpacity": 0.2,
+                "bgColor": "#8E8",
+                "imgAlign": "left",
+                "imgVAlign": "top"
+            });
+
+            $("#loading2").nowloading();
+
+        });
+
+        function showBg(){
+            $("#loading").nowloading("show");
+        }
+        function hideBg(){
+            $("#loading").nowloading("hide");
+        }
+
+        function showBg2(){
+            $("#loading2").nowloading("show");
+        }
+        function hideBg2(){
+            $("#loading2").nowloading("hide");
+        }
+    </script>
     <style type="text/css">div#loading{width:400px;height:400px;} div#loading2{width:300px;height:200px;}</style>
 </head>
 <body>
