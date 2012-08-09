@@ -12,9 +12,17 @@ Add script "after" the jQuery library.
 ##Dependencies
 This plugin requires jQuery v1.4.2 (or higher).
 
-##Usage
+##Example Usage
+    //Initial setting when DOM is ready
+    $(function(){
+        $("#selctor").nowloading();
+    });
 
-    $("#selctor").nowloading();
+    $("#selector").nowloading("show");
+    //...
+    //some functions taking time such as ajax methods
+    //...
+    $("#selector").nowloading("hide");
 
 ##Options
     $("#selector").nowloading({
