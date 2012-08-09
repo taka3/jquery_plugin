@@ -27,11 +27,11 @@ This plugin requires jQuery v1.4.2 (or higher).
 ##Options
     $("#selector").nowloading({
         'bgColor': '#AAA',
-        'bgOpacity': 0.70,
+        'bgOpacity': 0.70,//1.0 = no opacity, 0 = completely transparent
         'loadingImg': 'images/loading_img.gif',//relative path from this js file
         'zIndex': 1000,// bg z-index. image's z-index defined +1
-        'imgAlign': 'center',// center, left, right
-        'imgVAlign': 'center'// center, top, bottom
+        'imgAlign': 'center',//loading image holizontal position: center, left, right
+        'imgVAlign': 'center'//loading image vertical position: center, top, bottom
     });
 
 
