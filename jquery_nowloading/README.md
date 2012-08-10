@@ -45,5 +45,6 @@ This plugin requires jQuery v1.4.2 (or higher).
 
 ##Changelog
 
+
 ##Author
 [taka3](https://github.com/taka3)
