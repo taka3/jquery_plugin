@@ -8,10 +8,10 @@
 
 /**
  * Plugin to show "now loading" indication over the HTML elements
- */
+*/
 ;(function($, undefined){
 
-//private methods-----------------------------------------------
+    //private methods-----------------------------------------------
     function _getBgHeight(e){
         return $(e).height();
     }
@@ -27,7 +27,7 @@
             return this.each(function(){
 
                 var $loadingBox = $('<div></div>'),
-                    $loadingImg = $('<div></div>');
+                $loadingImg = $('<div></div>');
 
                 var settings = $.extend({
                     'bgColor': '#AAA',
@@ -66,19 +66,19 @@
         },
         show : function( ) {
             return this.each(function(){
-            $.data(this,'ldBox').css({
-                left: $(this).position().left,
-                top: $(this).position().top,
-                width: _getBgWidth(this),
-                height: _getBgHeight(this)
-            }).appendTo('body');
-            $.data(this,'ldImg').css({
-                left: $(this).position().left,
-                top: $(this).position().top,
-                width: _getBgWidth(this),
-                height: _getBgHeight(this)
-            }).appendTo('body');
-//
+                $.data(this,'ldBox').css({
+                    left: $(this).position().left,
+                    top: $(this).position().top,
+                    width: _getBgWidth(this),
+                    height: _getBgHeight(this)
+                }).appendTo('body');
+                $.data(this,'ldImg').css({
+                    left: $(this).position().left,
+                    top: $(this).position().top,
+                    width: _getBgWidth(this),
+                    height: _getBgHeight(this)
+                }).appendTo('body');
+                //
             });
         },
         hide : function( ) {
@@ -87,13 +87,13 @@
                 $.data(this, 'ldImg').remove();
             });
         }
-// TODO change option values after definition
-//        option: function( optKey, optVal ) {
-//            alert(optKey + " and " + optVal);
-//            $.data(this, 'ldBox').css({
-//                optKey: optVal
-//            });
-//        },
+        // TODO change option values after definition
+        //        option: function( optKey, optVal ) {
+        //            alert(optKey + " and " + optVal);
+        //            $.data(this, 'ldBox').css({
+        //                optKey: optVal
+        //            });
+        //        },
     };
 
     $.fn.nowloading = function( method ){
