@@ -1,10 +1,9 @@
 /*!
 * jQuery Now Loading Indicator Plugin
 * Version 1.0.0 Aug. 09, 2012
-* Copyright (c) 2012 Takahiro Murayama
+* Copyright (c) 2012 taka3 (http://taka3.info) All Rights Reserved.
 * Licensed under the MIT license
 * http://www.opensource.org/licenses/mit-license.php
-* @author Takahiro Murayama
 *-----------------------------------------------------------*/
 
 /**
