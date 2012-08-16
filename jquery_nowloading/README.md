@@ -26,6 +26,7 @@ This plugin requires jQuery v1.4.2 (or higher).
 
 ##Options
 Default values:
+
     $("#selector").nowloading({
         'bgColor': '#AAA',
         'bgOpacity': 0.70,    //1.0 = no opacity, 0 = completely transparent
@@ -49,4 +50,5 @@ Default values:
 
 ##Author
 [taka3](https://github.com/taka3)
+
 web: [Octobersky](http://taka3.info)
