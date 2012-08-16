@@ -1,6 +1,7 @@
 #jQuery Afterwards Plugin
 
-This is a jQuery plugin to show a message box at the bottom of the page.
+This is a jQuery plugin to show a message box at the bottom of the page,
+could be used to suggest what to do "afterwards".
 
 ##Installation
 
