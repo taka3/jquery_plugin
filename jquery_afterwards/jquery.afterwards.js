@@ -26,7 +26,7 @@
                     'borderWidth': 3,
                     'borderColor': '#999',
                     'boxShadow': '0 0 10px 0 rgba(0,0,0,1)',
-                    'closeBtnImg': 'images/close_btn.gif',
+                    'closeBtnImg': 'images/toggle_btn.png',
                     'zIndex': 10,
                     'slildeSpeed': 500,
                     'areaBeforeHeight': 30,
@@ -46,7 +46,7 @@
                 var $outerBox = $(this),
                 $innerBox = $('<div id="afterwards_inner"></div>'),
                 $contentHd = $('<h3></h3>'),
-                $closeBtn = $('<div id="afterwards_close_btn">x</div>'),
+                $closeBtn = $('<div id="afterwards_tgl_btn"></div>'),
                 $contentBd = $('<div></div>');
 
                 //OuterBox Style
@@ -61,14 +61,19 @@
                     "width": settings.areaBeforeWidth,
                     "height": settings.areaBeforeHeight,
                     "box-shadow": settings.boxShadow,
-                    "border-left": "solid " + settings.borderWidth + "px " + settings.borderColor,
                     "border-top": "solid " + settings.borderWidth + "px " + settings.borderColor
                 });
                 //which to show the box, right or left
                 if(settings.areaPos == "left"){
-                    $outerBox.css({ "left": 0 });
+                    $outerBox.css({
+                        "left": 0,
+                        "border-right": "solid " + settings.borderWidth + "px " + settings.borderColor
+                    });
                 }else{
-                    $outerBox.css({ "right": 0});
+                    $outerBox.css({
+                        "right": 0,
+                        "border-left": "solid " + settings.borderWidth + "px " + settings.borderColor
+                    });
                 }
                 //InnerBox Style
                 $innerBox.css({
@@ -88,7 +93,8 @@
                     "width": "20px",
                     "height": "20px",
                     "cursor": "pointer",
-                    "background": "url(" + settings.closeBtnImg + ")"
+                    "background": "url(" + settings.closeBtnImg + ")",
+                    "background-repeat": "no-repeat"
                 });
                 //Body Contents and Style
                 $contentBd.text(settings.displayContent);
@@ -114,22 +120,19 @@
                             'width': settings.areaAfterWidth,
                             'height': settings.areaAfterHeight
                         }, settings.slideSpeed);
-                        //                        aftBox.find("#afterwards_close_btn").show();//toggle
                     } else if (openFlg === true) {
                         aftBox.stop().animate({
                             'width': settings.areaBeforeWidth,
                             'height': settings.areaBeforeHeight
                         }, settings.slideSpeed);
-                        //                        aftBox.find("#afterwards_close_btn").hide();//toggle
                     }
                 };
                 //when toggle button clicked
-                $('#afterwards_close_btn').click(function(){
+                $('#afterwards_tgl_btn').click(function(){
                     resizeBox();
                     openFlg = !openFlg;
                     btnOpenFlg = true;
                 });
-
 
                 //Get Position from Bottom
                 var bottomPos = $(document).height() - $(window).height() - settings.showHeightFromBottom;
@@ -152,7 +155,7 @@
         },
         destroy : function( ) {
             return this.each(function(){
-                $(this).html("");
+                $(this).remove();
             });
         }
     };

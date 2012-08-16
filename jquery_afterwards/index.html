@@ -10,22 +10,15 @@
                 $("#afterwards").afterwards({
                     "areaPos": "right"
                     });
-                $("#after2").afterwards({
-                    areaPos: "left"
-                });
-
             });
 </script>
-<style type="text/css">div#loading{width:400px;height:1000px;}</style>
+<style type="text/css">div#page{width:400px;height:2000px;}</style>
 </head>
 <body>
+    <input type="button" value="destroy!!" onclick="$('#afterwards').afterwards('destroy');" />
 
-    <div id="loading">loading1</div>
-    <input type="button" value="show" onclick="showBg();" />
-    <input type="button" value="hide" onclick="hideBg();"/>
-
+    <div id="page">page</div>
     <div id="afterwards"></div>
 
-    <div id="after2"></div>
 </body>
 </html>
