@@ -26,6 +26,7 @@ This plugin requires jQuery v1.4.2 (or higher).
 
 ##Options
 Default values:
+
     $("#selector").afterwards({
         'bgColor': '#DDD',
         'bgOpacity': 0.80,
